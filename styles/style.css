@@ -105,6 +105,10 @@ body {
     background-color: #f1e05a;
 }
 
+.lang.python::before {
+    background-color: #3572A5;
+}
+
 /**
 * Pages
 */
