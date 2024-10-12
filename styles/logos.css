@@ -1,0 +1,23 @@
+/**
+* Logos
+*/
+
+img.logo {
+    width: 20px;
+    height: 20px;
+    border-radius: 50%;
+}
+
+.link {
+    text-decoration: none;
+    color: white;
+}
+
+.link:hover {
+    color: var(--color-light-blue-2);
+}
+
+.link span {
+    position: relative;
+    bottom: 2.5px;
+}
