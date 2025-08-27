@@ -1,0 +1,25 @@
+/**
+* Button Component
+*/
+
+.button {
+    padding: 0.5rem 1rem;
+    border-radius: 0.5rem;
+    transition: all ease-in-out 0.2s;
+}
+
+.button.button__primary {
+    background: var(--color-button);
+    border: var(--border-button-primary);
+}
+
+.button.button__secondary {
+    border: var(--border-button-secondary);
+}
+
+.button:hover { background: var(--color-button-hover); }
+
+.button.button__secondary:hover {
+    border: none;
+    border: solid 2px var(--color-button-hover);
+}

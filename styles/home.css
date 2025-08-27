@@ -1,0 +1,260 @@
+/**
+* Home Page
+*/
+
+section#home {
+    height: max-content;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 2em;
+}
+
+section#home .section__wrapper {
+    width: max-content;
+    margin: auto;
+    display: grid;
+    grid-template-areas: 
+        'image text'
+        'image buttons';
+}
+
+section#home img:not(.icon) {
+    width: 450px;
+    border-radius: 50%;
+    grid-area: image;
+    margin-right: 3rem;
+}
+
+section#home p {
+    width: 40rem;
+    grid-area: text;
+    display: flex;
+    justify-content: center;
+    align-items: flex-end;
+    margin-bottom: 1.5em;
+}
+
+section#home .buttons {
+    grid-area: buttons;
+}
+
+@media (max-width: 1155px) {
+    section#home .section__wrapper {
+        grid-template-areas: 
+            'image'
+            'text'
+            'buttons';
+    }
+
+    section#home .section__wrapper img:not(.icon) {
+        margin: auto;
+        margin-bottom: 2em;
+        width: 80vw;
+        max-width: 320px;
+    }
+
+    section#home p {
+        width: 80%;
+        margin: auto;
+        margin-bottom: 1.25em;
+    }
+
+    section#home .buttons {
+        text-align: center;
+    }
+}
+
+@media (max-width: 450px) {
+    section#home .buttons {
+        margin: auto;
+    }
+
+    section#home .buttons a:first-child { margin-bottom: 0.25rem; }
+
+    section#home .buttons a.button {
+        display: block;
+        width: max-content;
+    }
+}
+
+/**
+* Skills, Certificates, Projects, Socials, Blog Posts & Videos Page
+*/
+
+section#skills ul,
+section#certificates ul,
+section#projects ul,
+section#socials ul,
+section#blog_posts ul,
+section#videos ul {
+    width: 100%;
+    margin: auto;
+    text-align: center;
+}
+
+section#certificates ul,
+section#projects ul,
+section#socials ul,
+section#blog_posts ul,
+section#videos ul {
+    max-width: 92vw;
+}
+
+section#skills ul {
+    max-width: 70rem;
+}
+
+section#skills ul li,
+section#certificates ul li,
+section#projects ul li,
+section#socials ul li,
+section#blog_posts ul li,
+section#videos ul li {
+    display: inline-block;
+    margin: 0.5rem;
+}
+
+/* @media (max-width: 805px) {
+    section.page ul li {
+        padding: none !important;
+    }
+} */
+
+/**
+* Certificates Page
+*/
+
+.certificates__card {
+    position: relative;
+}
+
+.certificates__card a {
+    position: absolute;
+    top: 1em;
+    right: 1rem;
+    cursor: pointer;
+}
+
+section#certificates dialog[open] span:not(.prefix) {
+    display: block;
+}
+
+section#certificates dialog[open] span.prefix {
+    font-weight: var(--font-bold);
+}
+
+/**
+* Projects & Blog Posts Page
+*/
+
+.projects__card, .blog__card {
+    background: none !important;
+    border: var(--border-card-projects) !important;
+}
+
+.projects__card *, .blog__card * { display: block; }
+
+/**
+* Projects Page
+*/
+
+.projects__card span { line-height: 1.25em; }
+.projects__card h1 { line-height: 1.7em; }
+
+.projects__card .project__description, 
+.projects__card .project__role__wrapper {
+    color: var(--color-card-unfocus-text);
+}
+
+.projects__card .project__role { color: var(--color-card-focus-text); }
+
+.projects__card .project__role__wrapper * { display: inline; }
+
+.projects__card a.button {
+    width: max-content;
+    margin-top: 1em;
+}
+
+.projects__card a.button img.icon,
+.blog__card a.button img.icon { display: inline-block; }
+
+
+/**
+* Socials Page
+*/
+
+section#socials .socials__card {
+    display: grid;
+    grid-template-areas:
+        'img s'
+        'img t';
+}
+
+section#socials .socials__card img {
+    height: 5em;
+    border-radius: .75rem;
+    margin-right: 0.75rem;
+    grid-area: img;
+}
+
+section#socials .socials__card h1 {
+    grid-area: s;
+    line-height: 1em;
+    align-self: flex-end;
+}
+
+section#socials .socials__card span {
+    grid-area: t;
+    align-self: flex-start;
+}
+
+/**
+* Blog Posts Page
+*/
+
+.blog__card { max-width: 27rem; }
+
+.blog__card span {
+    color: var(--color-card-unfocus-text);
+    margin-bottom: 0.75em;
+}
+
+.blog__card a.button {
+    width: max-content;
+    margin-top: 1em;
+}
+
+/**
+* Video Card
+*/
+
+.videos__card { max-width: 27rem; }
+
+.videos__card p {
+    color: var(--color-card-unfocus-text);
+}
+
+.videos__card img {
+    aspect-ratio: 16/9;
+    width: 25rem;
+    border-radius: 1rem;
+    border: var(--border-button-primary);
+    cursor: pointer;
+    display: block;
+    margin: auto;
+    margin-top: .5em;
+    margin-top: 2em;
+}
+
+/**
+* Blog & Video Card
+*/
+
+@media (max-width: 805px) {
+    .blog__card, .videos__card {
+        max-width: 85vw;
+    }
+
+    .videos__card img { max-width: 95%; }
+}

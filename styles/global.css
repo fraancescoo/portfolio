@@ -1,0 +1,207 @@
+/**
+* Imports
+*/
+
+/* Google Fonts */
+@import url('https://fonts.googleapis.com/css2?family=JetBrains+Mono:ital,wght@0,100..800;1,100..800&display=swap');
+
+/* Project Files */
+@import './header.css';
+
+/* Components */
+@import './components/page.css';
+@import './components/button.css';
+@import './components/card.css';
+
+/**
+* Global
+*/
+
+:root {
+    /**
+    * Colors
+    */
+
+    --color-text: hsl(220 60% 95%);
+
+    --color-background: hsl(240 30% 10%);
+    --color-background-light: hsl(240 60% 20%);
+    --color-background-dark: hsl(240 20% 10%);
+    --color-background-article: hsl(240 30% 15%);
+
+    --color-button: hsl(240 70% 50%);
+    --color-button-hover: hsl(235 70% 40%);
+    --color-button-border: hsl(240 50% 20%);
+    
+    --color-card: var(--color-button);
+    --color-card-border: hsl(240 70% 25%);
+    --color-card-focus-text: hsl(240 70% 70%);
+    --color-card-unfocus-text: hsl(240 30% 80%);
+
+    --color-scrollbar-track: hsl(240 50% 25%);
+    --color-scrollbar-thumb: hsl(240 80% 50%);
+    --color-scrollbar-thumb-hover: hsl(240 70% 50%);
+
+    /**
+    * Borders
+    */
+
+    --border-button-primary: solid 2px var(--color-button-border);
+    --border-button-secondary: solid 2px var(--color-button);
+
+    --border-card: solid 2px var(--color-card-border);
+    --border-card-projects: solid 2px var(--color-card);
+
+    --border-hamburger-menu: solid 2px var(--color-background-light);
+    --border-dialog-menu: solid 4px var(--color-background-light);
+
+    /**
+    * Gradients
+    */
+
+    --gradient-card: linear-gradient(0deg, var(--color-card), 90%, var(--color-card-dark));
+    --gradient-card-hover: linear-gradient(0deg, var(--color-card), var(--color-card-dark));
+
+    /**
+    * Shadow
+    */
+
+    --shadow-dialog: 4px 4px 100px 0px var(--color-background-light);
+
+    /**
+    * Fonts
+    */
+
+    --ff-jetbrains: "JetBrains Mono", monospace;
+
+    --font-normal: 400;
+    --font-bold: 700;
+
+    --font-large: var(--font-bold) 2.5rem/1.2em var(--ff-jetbrains);
+    --font-semi-large: var(--font-bold) 2rem/1.2em var(--ff-jetbrains);
+    --font-medium: var(--font-normal) 1rem/1.6em var(--ff-jetbrains);
+}
+
+*, *::before, *::after {
+    margin: 0;
+    padding: 0;
+}
+
+*:not(header) { box-sizing: border-box; }
+
+/**
+* General
+*/
+
+html, body {
+    width: 100%;
+    height: 100%;
+
+    overflow-x: hidden;
+    scroll-behavior: smooth;
+}
+
+body {
+    background: var(--color-background);
+    color: var(--color-text);
+    font: var(--font-medium);
+    overflow-y: scroll;
+}
+
+a {
+    color: var(--color-text);
+    text-decoration: none;
+}
+
+ul.hide_dot {
+    list-style: none;
+}
+
+img.icon {
+    height: 1.25em;
+    position: relative;
+    top: .25em;
+    margin-right: .25rem;
+}
+
+/* body:has(dialog[open]) {
+    filter: blur(40px) brightness(45%);
+} */
+
+dialog[open] {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 75vw;
+    height: 75vh;
+    padding: 5vh 5vw;
+    margin: auto;
+    border-radius: 1rem;
+    background: var(--color-background-dark);
+    color: var(--color-text);
+    -webkit-box-shadow: var(--shadow-dialog); 
+    box-shadow: var(--shadow-dialog);
+    border: var(--border-dialog-menu);
+    font-size: 1.5rem;
+    line-height: 1.25em;
+    outline: none;
+}
+
+dialog[open]::backdrop {
+    backdrop-filter: blur(40px) brightness(45%);
+}
+
+/**
+* Scrollbar
+*/
+
+::-webkit-scrollbar {
+    width: 12px;
+}
+
+::-webkit-scrollbar-track {
+    background: var(--color-scrollbar-track);
+}
+
+::-webkit-scrollbar-thumb {
+    background: var(--color-scrollbar-thumb);
+    border-radius: 1rem;
+}
+
+::-webkit-scrollbar-thumb:hover {
+    background: var(--color-scrollbar-thumb-hover);
+}
+
+/**
+* Typography
+*/
+
+h1 { font: var(--font-large); }
+h2 { font: var(--font-semi-large); }
+
+/**
+* Article
+*/
+
+article {
+    width: 70vw;
+    min-height: 70%;
+    background-color: var(--color-background-article);
+    margin: auto;
+    padding: 1rem;
+    border-radius: 1rem;
+    position: relative;
+    overflow-x: scroll;
+    margin-bottom: 20%;
+    border: none;
+}
+
+article img {
+    position: relative;
+    width: auto;
+    max-width: 100%;
+    user-select: none;
+    display: block;
+    margin-top: 1em;
+    margin-bottom: 1em;
+}
