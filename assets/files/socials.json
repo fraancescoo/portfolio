@@ -14,7 +14,13 @@
     {
         "socialName": "Github",
         "name": "Fraancescoo",
-        "url": "https://www.youtube.com/@fraanceescoo",
+        "url": "https://github.com/Fraancescoo/",
         "image": "github"
+    },
+    {
+        "socialName": "Linkedin",
+        "name": "FrancescoPiantone",
+        "url": "https://linkedin.com/in/francescopiantone",
+        "image": "linkedin"
     }
 ]

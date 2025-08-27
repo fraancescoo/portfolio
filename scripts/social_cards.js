@@ -25,7 +25,7 @@ class Social {
 }
 
 const socialCardTemplate = `
-<img src="/assets/images/{3}propic.png" alt="">
+<img src="/assets/images/{3}propic.png">
 <h1>{0}</h1>
 <span>{1}</span>
 `;
@@ -39,6 +39,7 @@ function buildSocial(social) {
         .addClass('card')
         .addClass('socials__card')
         .html(format(socialCardTemplate, objectToArray(social)))
+        .on('click', () => location.href = social.url)
         .get(0);
 }
 
