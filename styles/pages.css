@@ -1,0 +1,68 @@
+/*
+* Pages
+*/
+
+.page:not(#home) { margin-top: 5vh; }
+
+/*
+* Home
+*/
+
+#home {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 40vh;
+    position: relative;
+    top: var(--header-height);
+    max-width: 85vw;
+    margin: auto;
+    margin-bottom: var(--header-height);
+}
+
+#home .page__container { text-align: center; }
+
+#home .page__container p {
+    max-width: min(680px, 80vw);
+    /* text-align: left; */
+    margin-top: var(--spacing-small);
+    margin-bottom: var(--spacing-small);
+}
+
+/* #home .page__container .buttons {
+    margin-top: var(--spacing-medium);
+} */
+
+/*
+* Certificates, Projects & Socials
+*/
+
+#skills > div,
+#certificates > div,
+#projects > div,
+#socials > div {
+    display: flex;
+    justify-content: center;
+    align-items: stretch;
+    margin: auto;
+    width: 75vw;
+    gap: var(--spacing-small);
+    margin-top: var(--spacing-medium);
+    flex-wrap: wrap;
+}
+
+#skills .card,
+#certificates .card,
+#projects .card,
+#socials .card {
+    text-align: center;
+    flex: 1 1 0;
+    min-width: 272px;
+    max-width: 15vw;
+    /* height: 176px; */
+}
+
+#skills .card > p,
+#certificates .card > p,
+#projects .card > p,
+#socials .card > p { color: var(--color-text-subtitle); }
